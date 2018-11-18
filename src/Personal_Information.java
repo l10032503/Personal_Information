@@ -6,7 +6,7 @@ public class Personal_Information<TodoList> {
 		personal_information.start();
 	}
 	
-	public <TodoList> void start() {
+	public void start() {
 		int choice;
 		Scanner scan = new Scanner(System.in);
 		
