@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class Contacts {
 	static Scanner scan = new Scanner(System.in);
 	
-	private Node head = null;
-	private Node tail = null;
+	private Node head = new Node(null,null,null);
+	private Node tail = new Node(null,null,null);
 	private int size;
 	
 	public Contacts() {
@@ -169,9 +169,9 @@ public class Contacts {
 		temp = head;
 		Node prev = new Node(null,null,null);
 		
-		System.out.println(temp.name + " " + NM);
+		//System.out.println(temp.name + " " + NM);
 		while (!temp.name.equals(NM)) {
-			System.out.println(temp.name + " " + NM);
+			//System.out.println(temp.name + " " + NM);
 			prev = temp;
 			temp = temp.next;
 			if (temp == null) {
@@ -181,9 +181,19 @@ public class Contacts {
 		}
 		
 		if (temp == head) {
+			if (head == tail) {
+				System.out.println("head " + head.name + head.phone_number + head.email + size);
+				System.out.println("temp " + temp.name + temp.phone_number + temp.email + size);
+				System.out.println("tail " + tail.name + tail.phone_number + tail.email + size);		
+				head = new Node (null,null,null);
+				tail = new Node (null,null,null);
+			} else {
+			System.out.println("head " + head.name + head.phone_number + head.email + size);
+			System.out.println("temp " + temp.name + temp.phone_number + temp.email + size);
+			System.out.println("temp " + temp.next.name + temp.next.phone_number + temp.next.email + size);
+			System.out.println("tail " + tail.name + tail.phone_number + tail.email + size);		
 			head = temp.next;
-			temp = null;
-
+			}
 		} else {
 			prev.next = temp.next;
 			
@@ -191,9 +201,8 @@ public class Contacts {
 				tail = temp;
 			}
 			
-			temp = null;	
 		}
-		
+		temp = null;
 		size--;
 		ViewContacts();
 		return;
