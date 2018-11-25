@@ -105,6 +105,7 @@ public class Contacts {
 			//System.out.println("tail " + tail.name + tail.phone_number + tail.email + size);		
 			tail.next = newNode;
 			tail = newNode;
+			tail.next = new Node(null,null,null);
 			//System.out.println("tail " + tail.name + tail.phone_number + tail.email + size);		
 			size++;
 		}
@@ -141,11 +142,15 @@ public class Contacts {
 		
 		while (!temp.name.equals(NM)) {
 			//System.out.println(temp.name + " " + NM);
-			temp = temp.next;
-			if (temp == null) {
+			if (temp.next.name == null) {
 				System.out.println("해당하는 이름이 없습니다.");
 				return;
 			}
+			temp = temp.next;
+			/*if (temp == null) {
+				System.out.println("해당하는 이름이 없습니다.");
+				return;
+			}*/
 		}
 		
 		System.out.print("Name: ");
@@ -165,40 +170,41 @@ public class Contacts {
 	}
 	
 	public void DeleteContacts(String NM) {
-		Node temp = new Node(null,null,null);
+		Node temp;
+		temp = new Node(null,null,null);
 		temp = head;
 		Node prev = new Node(null,null,null);
 		
-		//System.out.println(temp.name + " " + NM);
 		while (!temp.name.equals(NM)) {
 			//System.out.println(temp.name + " " + NM);
 			prev = temp;
-			temp = temp.next;
-			if (temp == null) {
+			if (temp.next.name == null) {
 				System.out.println("해당하는 이름이 없습니다.");
 				return;
 			}
+			temp = temp.next;
+			
 		}
 		
 		if (temp == head) {
 			if (head == tail) {
-				System.out.println("head " + head.name + head.phone_number + head.email + size);
-				System.out.println("temp " + temp.name + temp.phone_number + temp.email + size);
-				System.out.println("tail " + tail.name + tail.phone_number + tail.email + size);		
+				//System.out.println("head " + head.name + head.phone_number + head.email + size);
+				//System.out.println("temp " + temp.name + temp.phone_number + temp.email + size);
+				//System.out.println("tail " + tail.name + tail.phone_number + tail.email + size);		
 				head = new Node (null,null,null);
 				tail = new Node (null,null,null);
 			} else {
-			System.out.println("head " + head.name + head.phone_number + head.email + size);
-			System.out.println("temp " + temp.name + temp.phone_number + temp.email + size);
-			System.out.println("temp " + temp.next.name + temp.next.phone_number + temp.next.email + size);
-			System.out.println("tail " + tail.name + tail.phone_number + tail.email + size);		
+			//System.out.println("head " + head.name + head.phone_number + head.email + size);
+			//System.out.println("temp " + temp.name + temp.phone_number + temp.email + size);
+			//System.out.println("temp " + temp.next.name + temp.next.phone_number + temp.next.email + size);
+			//System.out.println("tail " + tail.name + tail.phone_number + tail.email + size);		
 			head = temp.next;
 			}
 		} else {
 			prev.next = temp.next;
 			
 			if(temp == tail) {
-				tail = temp;
+				tail = prev;
 			}
 			
 		}
