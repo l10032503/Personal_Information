@@ -10,7 +10,7 @@ public class Personal_Information<TodoList> {
 		int choice;
 		Scanner scan = new Scanner(System.in);
 		
-		while(1>0) {
+		while(true) {
 			System.out.println("1. Contacts");
 			System.out.println("2. To-do List");
 			System.out.println("3. Appotintments");
