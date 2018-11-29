@@ -67,7 +67,7 @@ public class Contacts {
 				break;
 			case 3:
 				if (size == 0) {
-					System.out.println("입력된 데이터가 없습니다.");
+					System.out.println("No data.");
 					break;
 				}
 				System.out.print("Update Name:");
@@ -76,7 +76,7 @@ public class Contacts {
 				break;
 			case 4:
 				if (size == 0) {
-					System.out.println("입력된 데이터가 없습니다.");
+					System.out.println("No data.");
 					break;
 				}
 				System.out.print("Delete Name:");
@@ -143,12 +143,12 @@ public class Contacts {
 		while (!temp.name.equals(NM)) {
 			//System.out.println(temp.name + " " + NM);
 			if (temp.next.name == null) {
-				System.out.println("해당하는 이름이 없습니다.");
+				System.out.println("No data.");
 				return;
 			}
 			temp = temp.next;
 			/*if (temp == null) {
-				System.out.println("해당하는 이름이 없습니다.");
+				System.out.println(".");
 				return;
 			}*/
 		}
@@ -179,7 +179,7 @@ public class Contacts {
 			//System.out.println(temp.name + " " + NM);
 			prev = temp;
 			if (temp.next.name == null) {
-				System.out.println("해당하는 이름이 없습니다.");
+				System.out.println("No data.");
 				return;
 			}
 			temp = temp.next;
