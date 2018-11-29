@@ -95,6 +95,7 @@ public class ToDoList {
 //		System.out.println(todolist_ArrayList.size());
 		//System.out.println(todolist_information.getName()+todolist_information.getDate()+todolist_information.getDue()+todolist_information.getDescription());
 
+<<<<<<< HEAD
 		
 		/*
 		 * List print
@@ -110,6 +111,8 @@ public class ToDoList {
 		 * f7 : move step
 		 * f8 : skip
 		 */
+=======
+>>>>>>> 56127b0995b9dae825107f58ed6ae0b830cd6429
 		for(int i=0; i<todolist_ArrayList.size();i++) {
 			//System.out.println(todolist_information.getName()+todolist_information.getDate()+todolist_information.getDue()+todolist_information.getDescription());
 			System.out.println(todolist_ArrayList.get(i).getName() + "\t" 
