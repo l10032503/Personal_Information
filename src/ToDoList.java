@@ -95,24 +95,7 @@ public class ToDoList {
 //		System.out.println(todolist_ArrayList.size());
 		//System.out.println(todolist_information.getName()+todolist_information.getDate()+todolist_information.getDue()+todolist_information.getDescription());
 
-<<<<<<< HEAD
-		
-		/*
-		 * List print
-		 * 지삼이가 찍은건 List의 단지 이름을 찍은 것 뿐!
-		 * 허나 진짜 찍고자 하는건 List안의 n 번째 요소의 각 object들임!
-		 * 그래서 만약 찍고자 하는 object들이 있으면 해당 list의 size만큼 loop를 돌면서 get(i)로 찾고 그 뒤에 점을 붙인 후 object를 get 한다
-		 * 
-		 * Debug mode
-		 * ctrl + shift + b 를 누르면 해당 라인에 break point가 생김 (라인에 마우스 더블클릭해도 생김)
-		 * 해당 변수에서 마우스 오버를 해도 보이고, shift + i를 누르면 창이 사라지지 않고 그대로 보임
-		 * 또는 오른쪽 debug 변수 창을 봐도 나옴
-		 * F6 : next step
-		 * f7 : move step
-		 * f8 : skip
-		 */
-=======
->>>>>>> 56127b0995b9dae825107f58ed6ae0b830cd6429
+
 		for(int i=0; i<todolist_ArrayList.size();i++) {
 			//System.out.println(todolist_information.getName()+todolist_information.getDate()+todolist_information.getDue()+todolist_information.getDescription());
 			System.out.println(todolist_ArrayList.get(i).getName() + "\t" 
