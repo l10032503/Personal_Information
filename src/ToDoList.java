@@ -96,8 +96,6 @@ public class ToDoList {
 //		System.out.println(todolist_ArrayList.size());
 		//System.out.println(todolist_information.getName()+todolist_information.getDate()+todolist_information.getDue()+todolist_information.getDescription());
 
-		
-		
 		for(int i=0; i<todolist_ArrayList.size();i++) {
 			//System.out.println(todolist_information.getName()+todolist_information.getDate()+todolist_information.getDue()+todolist_information.getDescription());
 			System.out.println(todolist_ArrayList.get(i).getName() + "\t" 
