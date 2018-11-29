@@ -1,7 +1,6 @@
-
+import java.util.Scanner;
+import java.util.List;
+import java.util.ArrayList;
 public class ToDoList {
-	public void starProgram_ToDoList() {
-		System.out.println("ToDoList");
-		System.out.prinln("hihihi");
-	}
+
 }
