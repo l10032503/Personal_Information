@@ -15,7 +15,7 @@ public class Personal_Information<TodoList> {
 			System.out.println("2. To-do List");
 			System.out.println("3. Appotintments");
 			System.out.println("0. Exit");
-			System.out.print("Choice :  ");
+			System.out.print("Choice Number =>  ");
 		
 			choice = scan.nextInt();
 		

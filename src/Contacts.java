@@ -49,7 +49,7 @@ public class Contacts {
 			System.out.println("2.View");
 			System.out.println("3.Update");
 			System.out.println("4.Delete");
-			System.out.print("메뉴 번호 입력=> ");
+			System.out.print("Choice Number=> ");
 			select = scan.nextInt();
 			
 			switch(select) {
