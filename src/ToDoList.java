@@ -43,7 +43,7 @@ public class ToDoList {
 			System.out.println("2.View");
 			System.out.println("3.Update");
 			System.out.println("4.Delete");
-			System.out.print("Choice number");
+			System.out.print("Choice number =>");
 			this.setInput(scan.nextInt());
 			if(input==1) {
 				//System.out.println(getInput());
