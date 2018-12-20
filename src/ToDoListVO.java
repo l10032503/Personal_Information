@@ -1,3 +1,5 @@
+package com.example.junit;
+
 public class ToDoListVO {
 	private String name;
 	private long date;
@@ -36,4 +38,5 @@ public class ToDoListVO {
 	public void setDescription(String description) {
 		this.description=description;
 	}
+	
 }
