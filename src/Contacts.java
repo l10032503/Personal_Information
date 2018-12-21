@@ -66,8 +66,8 @@ public class Contacts {
 				ViewContacts();
 				break;
 			case 3:
-				if (size == 0) {
-					System.out.println("입력된 데이터가 없습니다.");
+				if (isContactSizeZero(size)) {
+					System.out.println("No data.\n");
 					break;
 				}
 				System.out.print("Update Name:");
@@ -75,8 +75,8 @@ public class Contacts {
 				UpdateContacts(NM);
 				break;
 			case 4:
-				if (size == 0) {
-					System.out.println("입력된 데이터가 없습니다.");
+				if (isContactSizeZero(size)) {
+					System.out.println("No data.\n");
 					break;
 				}
 				System.out.print("Delete Name:");
@@ -90,7 +90,7 @@ public class Contacts {
 	}
 	
 	public void CreateContacts(String NM, String PN, String EM) {
-		if (size == 0) {
+		if (isContactSizeZero(size)) {
 			Node newNode = new Node(NM,PN,EM);
 			newNode.next = head;
 			head = newNode;
@@ -142,13 +142,13 @@ public class Contacts {
 		
 		while (!temp.name.equals(NM)) {
 			//System.out.println(temp.name + " " + NM);
-			if (temp.next.name == null) {
-				System.out.println("해당하는 이름이 없습니다.");
+			if (isThereNoData(temp.next.name)) {
+				System.out.println("There isn't name you find.\n");
 				return;
 			}
 			temp = temp.next;
 			/*if (temp == null) {
-				System.out.println("해당하는 이름이 없습니다.");
+				System.out.println(".");
 				return;
 			}*/
 		}
@@ -178,8 +178,8 @@ public class Contacts {
 		while (!temp.name.equals(NM)) {
 			//System.out.println(temp.name + " " + NM);
 			prev = temp;
-			if (temp.next.name == null) {
-				System.out.println("해당하는 이름이 없습니다.");
+			if (isThereNoData(temp.next.name)) {
+				System.out.println("There isn't name you find.\n");
 				return;
 			}
 			temp = temp.next;
@@ -212,5 +212,19 @@ public class Contacts {
 		size--;
 		ViewContacts();
 		return;
+	}
+	
+	public boolean isContactSizeZero(int contactSize) {
+		if (contactSize == 0)
+			return true;
+		else
+			return false;
+	}
+	
+	public boolean isThereNoData(String dataname) {
+		if (dataname == null)
+			return true;
+		else
+			return false;
 	}
 }

@@ -1,4 +1,6 @@
+
 package com.example.junit;
+
 
 public class ToDoListVO {
 	private String name;
@@ -38,5 +40,5 @@ public class ToDoListVO {
 	public void setDescription(String description) {
 		this.description=description;
 	}
-	
+
 }

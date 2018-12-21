@@ -50,7 +50,7 @@ public class ToDoList {
 			System.out.println("2.View");
 			System.out.println("3.Update");
 			System.out.println("4.Delete");
-			System.out.print("Choice number");
+			System.out.print("Choice number =>");
 			this.setInput(scan.nextInt());
 			if(input==1) {
 				//System.out.println(getInput());
@@ -111,6 +111,8 @@ public class ToDoList {
 				
 			}
 		});	
+    
+
 		for(int i=0; i<todolist_ArrayList.size();i++) {
 			//System.out.println(todolist_information.getName()+todolist_information.getDate()+todolist_information.getDue()+todolist_information.getDescription());
 			System.out.println(todolist_ArrayList.get(i).getName() + "\t" 
