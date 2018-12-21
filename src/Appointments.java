@@ -14,7 +14,7 @@ public class Appointments {
 			System.out.println("2. View ");
 			System.out.println("3. Update");
 			System.out.println("4. Delete");
-			System.out.print("Choice :  ");
+			System.out.print("Choice Number =>  ");
 			select = scan.nextInt();
 		
 			switch(select) {

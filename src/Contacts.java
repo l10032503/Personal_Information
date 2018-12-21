@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class Contacts {
 	static Scanner scan = new Scanner(System.in);
 	
-	private Node head = new Node(null,null,null);
-	private Node tail = new Node(null,null,null);
-	private int size;
+	public Node head = new Node(null,null,null);
+	public Node tail = new Node(null,null,null);
+	public int size;
 	
 	public Contacts() {
 		head = new Node(null,null,null);
@@ -142,7 +142,7 @@ public class Contacts {
 		
 		while (!temp.name.equals(NM)) {
 			//System.out.println(temp.name + " " + NM);
-			if (isThereNoData(temp.next.name)) {
+			if (isitLastData(temp.next.name)) {
 				System.out.println("There isn't name you find.\n");
 				return;
 			}
@@ -178,7 +178,7 @@ public class Contacts {
 		while (!temp.name.equals(NM)) {
 			//System.out.println(temp.name + " " + NM);
 			prev = temp;
-			if (isThereNoData(temp.next.name)) {
+			if (isitLastData(temp.next.name)) {
 				System.out.println("There isn't name you find.\n");
 				return;
 			}
@@ -187,7 +187,7 @@ public class Contacts {
 		}
 		
 		if (temp == head) {
-			if (head == tail) {
+			if (isThereOneData()) {
 				//System.out.println("head " + head.name + head.phone_number + head.email + size);
 				//System.out.println("temp " + temp.name + temp.phone_number + temp.email + size);
 				//System.out.println("tail " + tail.name + tail.phone_number + tail.email + size);		
@@ -221,7 +221,14 @@ public class Contacts {
 			return false;
 	}
 	
-	public boolean isThereNoData(String dataname) {
+	public boolean isThereOneData() {
+		if (head == tail)
+			return true;
+		else
+			return false;
+	}
+	
+	public boolean isitLastData(String dataname) {
 		if (dataname == null)
 			return true;
 		else

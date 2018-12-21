@@ -29,8 +29,8 @@ public class Personal_Information {
 				todoList.startProgram();
 				break;
 			case 3:
-				//Appointments appointments = new Appointments();
-				//appointments.menu_Appointment();
+				Appointments appointments = new Appointments();
+				appointments.menu_Appointment();
 				break;
 			case 0:
 				return;
