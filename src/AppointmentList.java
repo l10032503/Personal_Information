@@ -1,34 +1,49 @@
+import java.util.ArrayList;
 
 class AppointmentList {
-	Node node;
-	int size = 0;
-	private class Node {
-		private String appointmentName, date, location;
-		private int peopleNum;
-		private Node next;
+	ArrayList<ListItem> appointments = new ArrayList<>();
+	
+	static class ListItem {
+		String appointmentName, date, location;
+		int peopleNum;
 	}
 	
 
-	public void addListItem(String appointmentName, String date, String location, int peopleNum) {
-		if(size == 0) {
-			
+	public void addListItem(ListItem item, int index) {
+		if(index == -1) {
+			appointments.add(item);
 		}
 		else {
-			
+			appointments.add(index, item);
+			appointments.remove(index + 1);
 		}
 	}
 	
 	public void printList() {
-		
+		System.out.println("Name\t date\t location\t people");
+		System.out.println("===================================================");
+		for(int i = 0; i < appointments.size(); i++) {
+			System.out.println(appointments.get(i).appointmentName + "\t "
+								+ appointments.get(i).date + "\t "
+								+ appointments.get(i).location + "\t "
+								+ appointments.get(i).peopleNum);
+		}
 	}
 	
 	public int searchListItem(String searchKey) {
+		int result = -1;
 		
-		int result = 0;
+		for(int i = 0; i < appointments.size(); i++) {
+			boolean discovery = searchKey.equals(appointments.get(i).appointmentName);
+			if(discovery == true) {
+				result = i;
+				break;
+			}
+		}
 		return result;
 	}
 	
-	public void deleteLsitItem(int index) {
-		
+	public void deleteListItem(int index) {
+		appointments.remove(index);
 	}
 }
