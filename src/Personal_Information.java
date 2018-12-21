@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Personal_Information<TodoList> {
+public class Personal_Information {
 	public static void main(String[]args) {
 		Personal_Information personal_information = new Personal_Information();
 		personal_information.start();
@@ -15,7 +15,7 @@ public class Personal_Information<TodoList> {
 			System.out.println("2. To-do List");
 			System.out.println("3. Appotintments");
 			System.out.println("0. Exit");
-			System.out.print("Choice :  ");
+			System.out.print("Choice Number =>  ");
 		
 			choice = scan.nextInt();
 		
@@ -26,11 +26,11 @@ public class Personal_Information<TodoList> {
 				break;
 			case 2:
 				ToDoList todoList = new ToDoList();
-				todoList.starProgram_ToDoList();
+				todoList.startProgram();
 				break;
 			case 3:
-				Appointments appointments = new Appointments();
-				appointments.menu_Appointment();
+				//Appointments appointments = new Appointments();
+				//appointments.menu_Appointment();
 				break;
 			case 0:
 				return;
