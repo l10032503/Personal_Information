@@ -1,5 +1,4 @@
 
-package com.example.junit;
 
 
 public class ToDoListVO {
